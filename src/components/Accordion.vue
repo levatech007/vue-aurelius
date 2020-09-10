@@ -50,6 +50,7 @@ export default {
 .vsa-list {
   background: none;
   --vsa-max-width: none;
+  --vsa-heading-padding: 0.5rem 0.5rem;
 }
 .vsa-item {
   background: #FFF;

@@ -1,7 +1,6 @@
 <template>
   <section>
     <div class="row reporting">
-      Reporting
       <Accordion />
     </div>
   </section>
@@ -21,5 +20,6 @@ export default {
 <style scoped>
 .reporting {
   background: lightpink;
+  padding-left: 10px;
 }
 </style>

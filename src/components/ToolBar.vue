@@ -1,14 +1,18 @@
 <template>
   <section>
     <div class="row toolbar">
-      Toolbar
+      <Accordion />
     </div>
   </section>
 </template>
 
 <script>
+import Accordion from '../components/Accordion'
 export default {
-  name: 'ToolBar'
+  name: 'ToolBar',
+  components: {
+    Accordion
+  }
 }
 </script>
 
@@ -16,6 +20,6 @@ export default {
 <style scoped>
 .toolbar {
   background: lightgreen;
-  min-height: 200px;
+  padding-right: 10px;
 }
 </style>
