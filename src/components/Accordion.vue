@@ -1,16 +1,5 @@
 <template>
-  <section class="row">
-    <div class="col-lg-4">
-      <TextInput />
-    </div>
-    <div class="col-lg-4">
-      <TextInput
-        v-for="(label,idx) in labels"
-        v-bind:key="idx"
-        v-bind:lbl="label.name"
-      />
-    </div>
-  </section>
+  <div></div>
 </template>
 
 <script>

@@ -31,6 +31,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+.row {
+  margin: 0;
+}
+main {
+  margin: 0 25px;
+}
 </style>
