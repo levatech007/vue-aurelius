@@ -8,6 +8,9 @@
     <div class="row">
       <div class="col-lg-4">
         <ToolBar />
+        <div class="row">
+          <OvalButton />
+        </div>
       </div>
       <div class="col-lg-8">
         <Reporting />
@@ -20,12 +23,14 @@
 import ClaimInfo from '../components/ClaimInfo.vue'
 import ToolBar from '../components/ToolBar.vue'
 import Reporting from '../components/Reporting.vue'
+import OvalButton from '../components/OvalButton.vue'
 export default {
   name: 'Main',
   components: {
     ClaimInfo,
     ToolBar,
-    Reporting
+    Reporting,
+    OvalButton
   }
 }
 </script>
