@@ -18,8 +18,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.toolbar {
-  background: lightgreen;
-  padding-right: 10px;
-}
+
 </style>
