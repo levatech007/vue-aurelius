@@ -1,31 +1,58 @@
 <template>
-  <div></div>
+  <vsa-list>
+  <!-- Here you can use v-for to loop through items  -->
+  <vsa-item v-for="(el,idx) in elements"
+  v-bind:key="idx">
+    <vsa-heading>
+      This is the heading
+      {{ el.heading }}
+    </vsa-heading>
+
+    <vsa-content>
+      This is the content
+      {{ el.content }}
+    </vsa-content>
+  </vsa-item>
+</vsa-list>
 </template>
 
 <script>
-import TextInput from '../components/TextInput.vue'
+import {
+  VsaList,
+  VsaItem,
+  VsaHeading,
+  VsaContent,
+} from 'vue-simple-accordion';
+import 'vue-simple-accordion/dist/vue-simple-accordion.css';
+
 export default {
-  name: 'ClaimInfo',
+  name: 'Accordion',
   components: {
-    TextInput
+    VsaList,
+    VsaItem,
+    VsaHeading,
+    VsaContent
   },
   data: function() {
     return {
-        labels: [
-          {name: 'Started'},
-          {name: 'Claim Handler'},
-          {name: 'Status'}
+        elements: [
+          {data: 'Test 1', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ligula imperdiet, laoreet odio eget, euismod nibh. Etiam fringilla commodo blandit. Duis vitae dignissim ipsum, quis auctor sapien'},
+          {data: 'Test 2', content: 'Integer euismod tortor in nisi aliquet, ut semper enim facilisis. Duis mollis fringilla nisl, quis molestie nisl molestie ut. Ut imperdiet ornare ligula, nec egestas nisi faucibus vel.'},
+          {data: 'Test 3', content: 'Ut venenatis turpis nisi, id imperdiet ipsum eleifend ut. Fusce malesuada id eros at tempor. Cras eu odio aliquet massa imperdiet fringilla. Aliquam erat volutpat.'}
         ]
       }
     }
-  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-section {
-  background: lightblue;
-  min-height: 200px;
-  padding: 25px 0;
+.vsa-list {
+  background: none;
+  --vsa-max-width: none;
 }
+.vsa-item {
+  background: #FFF;
+}
+
 </style>

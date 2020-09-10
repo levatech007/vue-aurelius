@@ -2,13 +2,18 @@
   <section>
     <div class="row reporting">
       Reporting
+      <Accordion />
     </div>
   </section>
 </template>
 
 <script>
+import Accordion from '../components/Accordion'
 export default {
-  name: 'Reporting'
+  name: 'Reporting',
+  components: {
+    Accordion
+  }
 }
 </script>
 
@@ -16,6 +21,5 @@ export default {
 <style scoped>
 .reporting {
   background: lightpink;
-  min-height: 500px;
 }
 </style>
