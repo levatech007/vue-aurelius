@@ -15,7 +15,7 @@
         v-bind:key="idx"
         v-bind:lbl="label.name"
       />
-      <Dropdown />
+      <Dropdown v-bind:options="options"/>
     </div>
     <div class="col-lg-4">
       <TextInput
@@ -51,7 +51,8 @@ export default {
           {name: 'Contract'},
           {name: 'Report Status'}
         ],
-        icons: [{name: '1'},{name: '2'},{name: '3'},{name: '4'},{name: '5'},{name: '6'}]
+        icons: [{name: '1'},{name: '2'},{name: '3'},{name: '4'},{name: '5'},{name: '6'}],
+        options: ['Aktiivne', 'Kohtus']
       }
     }
   }

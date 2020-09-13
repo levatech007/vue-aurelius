@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-3">Label</div>
     <div class="col-lg-9">
-      <VSelect :options="['Aktiivne', 'Kohtus']"/>
+      <VSelect :options="options"/>
     </div>
   </div>
 </template>
@@ -15,6 +15,9 @@ export default {
   name: 'Dropdown',
   components: {
     VSelect
+  },
+  props: {
+    options: Array
   }
 }
 
