@@ -22,29 +22,29 @@
     <!-- RIGHT SECTION -->
     <div class="col-lg-8">
       <div class="row inputs">
-        <div class="col-lg-1">Started</div>
+        <div class="col-lg-1 col-form-label">Started</div>
         <div class="col-lg-5">
           <input placeholder="Kuupäev siia" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
-        <div class="col-lg-1">Client</div>
+        <div class="col-lg-1 col-form-label">Client</div>
           <div class="col-lg-5">
             <input placeholder="John Doe" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
           </div>
       </div>
 
       <div class="row inputs">
-        <div class="col-lg-1">Handler</div>
+        <div class="col-lg-1 col-form-label">Handler</div>
         <div class="col-lg-5">
           <input placeholder="EVA" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
-        <div class="col-lg-1">Collector</div>
+        <div class="col-lg-1 col-form-label">Collector</div>
         <div class="col-lg-5">
           <input placeholder="Julianus" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
       </div>
 
       <div class="row inputs">
-        <div class="col-lg-1">Status</div>
+        <div class="col-lg-1 col-form-label">Status</div>
         <Dropdown v-bind:options="options" selected="Aktiivne"/>
         <div class="col-lg-1">Handler</div>
         <div class="col-lg-5">
@@ -54,7 +54,7 @@
 
       <div class="row inputs">
         <div class="col-lg-6"></div>
-        <div class="col-lg-1">Handler</div>
+        <div class="col-lg-1 col-form-label">Report Status</div>
         <Dropdown v-bind:options="options" selected="Aktiivne inkassomenetlus" />
       </div>
     </div>
@@ -97,5 +97,8 @@ section {
 }
 .inputs {
   margin-bottom: 20px;
+}
+.col-lg-1 {
+  vertical-align: middle;
 }
 </style>

@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     style: function() {
-      return `${ this.cls }`;
+      return this.cls;
     },
     color: function() {
       return this.cls == 'blue' ? '#49637E' : '#FFF';

@@ -16,5 +16,17 @@
     { "name":"Call", "icon":"phone-volume" },
     { "name":"Mail", "icon":"at" },
     { "name":"Sms", "icon":"comment" }
+  ],
+  "todos": [
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" },
+    { "descr":"", "time":"", "user":"" }
   ]
 }

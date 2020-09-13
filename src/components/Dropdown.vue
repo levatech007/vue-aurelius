@@ -21,5 +21,14 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
+.vs--searchable .vs__dropdown-toggle {
+  cursor: pointer;
+}
+.vs__clear svg {
+  display:none;
+}
+.vs__dropdown-toggle {
+  padding: 4px 0;
+}
 </style>
