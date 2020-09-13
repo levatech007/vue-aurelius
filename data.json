@@ -1,15 +1,20 @@
 {
-"buttons": [
-  { "name":"edit", "icon":"user-cog", "style":"red" },
-  { "name":"calendar", "icon":"calendar-alt", "style":"green" },
-  { "name":"phone", "icon":"phone", "style":"red" },
-  { "name":"sync", "icon":"sync-alt", "style":"blue" },
-  { "name":"email", "icon":"envelope", "style":"green" },
-  { "name":"payment", "icon":"hand-holding-usd", "style":"red" },
-  { "name":"address", "icon":"home", "style":"green" },
-  { "name":"todo", "icon":"list-alt", "style":"blue" },
-  { "name":"web", "icon":"globe", "style":"green" },
-  { "name":"square", "icon":"cubes", "style":"red" },
-  { "name":"money", "icon":"euro-sign", "style":"blue" }
-]
+  "buttons": [
+    { "name":"edit", "icon":"user-cog", "style":"red" },
+    { "name":"calendar", "icon":"calendar-alt", "style":"green" },
+    { "name":"phone", "icon":"phone", "style":"red" },
+    { "name":"sync", "icon":"sync-alt", "style":"blue" },
+    { "name":"email", "icon":"envelope", "style":"green" },
+    { "name":"payment", "icon":"hand-holding-usd", "style":"red" },
+    { "name":"address", "icon":"home", "style":"green" },
+    { "name":"todo", "icon":"list-alt", "style":"blue" },
+    { "name":"web", "icon":"globe", "style":"green" },
+    { "name":"square", "icon":"cubes", "style":"red" },
+    { "name":"money", "icon":"euro-sign", "style":"blue" }
+  ],
+  "ovalButtons": [
+    { "name":"Call", "icon":"phone-volume" },
+    { "name":"Mail", "icon":"at" },
+    { "name":"Sms", "icon":"comment" }
+  ]
 }

@@ -4,13 +4,13 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faPhone, faUserCog, faCalendarAlt, faSyncAlt, faEnvelope, faHome, faListAlt, faGlobe, faCubes, faEuroSign, faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faPhone, faUserCog, faCalendarAlt, faSyncAlt, faEnvelope, faHome, faListAlt, faGlobe, faCubes, faEuroSign, faHandHoldingUsd, faPhoneVolume, faAt, faComment } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import store from './store'
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
 
-library.add(faUserSecret, faPhone, faUserCog, faCalendarAlt, faSyncAlt, faEnvelope, faHome, faListAlt, faGlobe, faCubes, faEuroSign, faHandHoldingUsd )
+library.add(faUserSecret, faPhone, faUserCog, faCalendarAlt, faSyncAlt, faEnvelope, faHome, faListAlt, faGlobe, faCubes, faEuroSign, faHandHoldingUsd, faPhoneVolume, faAt, faComment )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

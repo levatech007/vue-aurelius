@@ -8,8 +8,13 @@
     <div class="row">
       <div class="col-lg-4">
         <ToolBar />
-        <div class="row">
-          <OvalButton />
+        <div class="row ovals">
+          <OvalButton
+          v-for="(btn,idx) in ovalButtons"
+          v-bind:key="idx"
+          v-bind:title="btn.name"
+          v-bind:icon="btn.icon"
+          />
         </div>
       </div>
       <div class="col-lg-8">
@@ -24,6 +29,8 @@ import ClaimInfo from '../components/ClaimInfo.vue'
 import ToolBar from '../components/ToolBar.vue'
 import Reporting from '../components/Reporting.vue'
 import OvalButton from '../components/OvalButton.vue'
+import Data from '../../data.json'
+
 export default {
   name: 'Main',
   components: {
@@ -31,6 +38,11 @@ export default {
     ToolBar,
     Reporting,
     OvalButton
+  },
+  data: function() {
+    return {
+        ovalButtons: JSON.parse(JSON.stringify(Data.ovalButtons))
+      }
   }
 }
 </script>

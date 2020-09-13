@@ -2,7 +2,7 @@
   <button :class="style">
     <font-awesome-icon
       :icon="['fas', icon]"
-      :style="{ color: 'white' }"
+      :style="{ color }"
       size="2x"
     />
   </button>
@@ -18,6 +18,9 @@ export default {
   computed: {
     style: function() {
       return `${ this.cls }`;
+    },
+    color: function() {
+      return this.cls == 'blue' ? '#49637E' : '#FFF';
     }
   }
 }
