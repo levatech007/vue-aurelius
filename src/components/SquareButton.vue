@@ -1,6 +1,6 @@
 <template>
   <button>
-    <font-awesome-icon :icon="['fas', 'user-secret']" />
+    <font-awesome-icon :icon="['fas', 'user-secret']"  :style="{ color: 'white' }" />
   </button>
 </template>
 
@@ -27,5 +27,9 @@ button {
   margin-bottom: 20px;
   background: #74BD77;
   border: 1px solid green;
+}
+.icons i,
+.button svg {
+   fill: #FFF;
 }
 </style>

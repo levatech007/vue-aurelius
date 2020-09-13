@@ -1,40 +1,70 @@
 <template>
   <section class="row">
+    <!-- LEFT SECTION -->
     <div class="col-lg-4">
-      <TextInput lbl="Debtor"/>
+      <div class="row">
+        <div class="col-lg-3">Debtor</div>
+        <div class="col-lg-9">
+          <input placeholder="Jane Doe" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+      </div>
+      <div class="row">
       <div class="buttons">
-      <SquareButton
-      v-for="(icon,idx) in icons"
-      v-bind:key="idx"
-      />
-    </div>
-    </div>
-    <div class="col-lg-4">
-      <TextInput
-        v-for="(label,idx) in labelsOne"
+        <SquareButton
+        v-for="(icon,idx) in icons"
         v-bind:key="idx"
-        v-bind:lbl="label.name"
-      />
-      <Dropdown v-bind:options="options"/>
+        />
+      </div>
     </div>
-    <div class="col-lg-4">
-      <TextInput
-        v-for="(label,idx) in labelsTwo"
-        v-bind:key="idx"
-        v-bind:lbl="label.name"
-      />
+    </div>
+    <!-- RIGHT SECTION -->
+    <div class="col-lg-8">
+      <div class="row inputs">
+        <div class="col-lg-1">Started</div>
+        <div class="col-lg-5">
+          <input placeholder="Kuupäev siia" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+        <div class="col-lg-1">Client</div>
+          <div class="col-lg-5">
+            <input placeholder="John Doe" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          </div>
+      </div>
+
+      <div class="row inputs">
+        <div class="col-lg-1">Handler</div>
+        <div class="col-lg-5">
+          <input placeholder="EVA" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+        <div class="col-lg-1">Collector</div>
+        <div class="col-lg-5">
+          <input placeholder="Julianus" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+      </div>
+
+      <div class="row inputs">
+        <div class="col-lg-1">Status</div>
+        <Dropdown v-bind:options="options" selected="Aktiivne"/>
+        <div class="col-lg-1">Handler</div>
+        <div class="col-lg-5">
+          <input placeholder="AB-122345" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </div>
+      </div>
+
+      <div class="row inputs">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-1">Handler</div>
+        <Dropdown v-bind:options="options" selected="Aktiivne inkassomenetlus" />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import TextInput from '../components/TextInput.vue'
 import Dropdown from '../components/Dropdown.vue'
 import SquareButton from '../components/SquareButton.vue'
 export default {
   name: 'ClaimInfo',
   components: {
-    TextInput,
     Dropdown,
     SquareButton
   },
@@ -67,5 +97,9 @@ section {
 }
 .buttons {
   margin-top: 30px;
+  margin-left: 15px;
+}
+.inputs {
+  margin-bottom: 20px;
 }
 </style>
