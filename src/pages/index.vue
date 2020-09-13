@@ -1,11 +1,12 @@
 <template>
   <div>
-    <Header viitenumber="712345678" />
+    <Header/>
     <Main />
   </div>
 </template>
 <script>
 
+import { mapGetters } from 'vuex'
 import Header from '../components/Header.vue'
 import Main from '../components/Main.vue'
 export default {
@@ -14,10 +15,8 @@ export default {
     Header,
     Main
   },
-  props: {
-    msg: String,
-    viitenumber: String
-  }
+  computed: mapGetters(['allClaims'])
+
 }
 </script>
 
