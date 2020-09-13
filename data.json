@@ -18,15 +18,41 @@
     { "name":"Sms", "icon":"comment" }
   ],
   "todos": [
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" },
-    { "descr":"", "time":"", "user":"" }
+    {
+      "todo": { "descr":"Maksekokkulepe muudetud", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment": ""
+    },
+    {
+      "todo": { "descr":"Maksekokkulepe", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment": ""
+    },
+    {
+      "todo": { "descr":"Email võlglasele", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":"Emaili teks siia"
+    },
+    {
+      "todo": { "descr":"Kliendi kommentaar", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":"Uus claim"
+    },
+    {
+      "todo": { "descr":"Aktiivne", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "descr":"Aktiivne", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "descr":"Lisati telefon 555-5555", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "descr":"Lisati email", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "descr":"RR Päring", "time":"11/14/1019 @ 11.33pm", "user":"EVA" },
+      "comment":"Aadress Main St.123"
+    }
   ]
 }

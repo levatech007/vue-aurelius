@@ -1,13 +1,46 @@
 const state = {
-  claims: [
-    {viitenumber: '', heading: 'Test 1', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ligula imperdiet, laoreet odio eget, euismod nibh. Etiam fringilla commodo blandit. Duis vitae dignissim ipsum, quis auctor sapien'},
-    // {viitenumber: '', heading: 'Test 2', content: 'Integer euismod tortor in nisi aliquet, ut semper enim facilisis. Duis mollis fringilla nisl, quis molestie nisl molestie ut. Ut imperdiet ornare ligula, nec egestas nisi faucibus vel.'},
-    // {viitenumber: '', heading: 'Test 3', content: 'Ut venenatis turpis nisi, id imperdiet ipsum eleifend ut. Fusce malesuada id eros at tempor. Cras eu odio aliquet massa imperdiet fringilla. Aliquam erat volutpat.'}
+  todos: [
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Maksekokkulepe muudetud", "user":"EVA" },
+      "comment": ""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Maksekokkulepe", "user":"EVA" },
+      "comment": ""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Email võlglasele", "user":"EVA" },
+      "comment":"Emaili teks siia"
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Kliendi kommentaar", "user":"TEST" },
+      "comment":"Uus claim"
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm",  "descr":"Aktiivne", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Aktiivne",  "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Lisati telefon 555-5555", "user":"TEST" },
+      "comment":""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Lisati email", "user":"EVA" },
+      "comment":""
+    },
+    {
+      "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"RR Päring", "user":"EVA" },
+      "comment":"Aadress Main St.123"
+    }
   ]
 }
 
 const getters = {
-  allClaims: (state) => state.claims
+  allTodos: (state) => state.todos
 }
 
 const actions = {

@@ -6,7 +6,7 @@
 </template>
 <script>
 
-import { mapGetters } from 'vuex'
+
 import Header from '../components/Header.vue'
 import Main from '../components/Main.vue'
 export default {
@@ -15,8 +15,6 @@ export default {
     Header,
     Main
   },
-  computed: mapGetters(['allClaims'])
-
 }
 </script>
 

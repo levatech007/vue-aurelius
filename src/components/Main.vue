@@ -19,6 +19,7 @@
       </div>
       <div class="col-lg-8">
         <Reporting />
+        <TestAcc />
       </div>
     </div>
   </main>
@@ -29,6 +30,7 @@ import ClaimInfo from '../components/ClaimInfo.vue'
 import ToolBar from '../components/ToolBar.vue'
 import Reporting from '../components/Reporting.vue'
 import OvalButton from '../components/OvalButton.vue'
+import TestAcc from '../components/TestAccordion.vue'
 import Data from '../../data.json'
 
 export default {
@@ -37,11 +39,12 @@ export default {
     ClaimInfo,
     ToolBar,
     Reporting,
-    OvalButton
+    OvalButton,
+    TestAcc
   },
   data: function() {
     return {
-        ovalButtons: JSON.parse(JSON.stringify(Data.ovalButtons))
+        ovalButtons: JSON.parse(JSON.stringify(Data.ovalButtons)),
       }
   }
 }
