@@ -16,6 +16,7 @@
           v-bind:icon="btn.icon"
           />
         </div>
+        <Tabs />
       </div>
       <div class="col-lg-8">
         <Reporting />
@@ -31,6 +32,7 @@ import ToolBar from '../components/ToolBar.vue'
 import Reporting from '../components/Reporting.vue'
 import OvalButton from '../components/OvalButton.vue'
 import TestAcc from '../components/TestAccordion.vue'
+import Tabs from '../components/Tabs.vue'
 import Data from '../../data.json'
 
 export default {
@@ -40,7 +42,8 @@ export default {
     ToolBar,
     Reporting,
     OvalButton,
-    TestAcc
+    TestAcc,
+    Tabs
   },
   data: function() {
     return {
@@ -57,5 +60,8 @@ export default {
 }
 main {
   margin: 0 25px;
+}
+.ovals {
+  margin-bottom: 50px !important;
 }
 </style>

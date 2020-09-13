@@ -46,7 +46,7 @@
       <div class="row inputs">
         <div class="col-lg-1 col-form-label">Status</div>
         <Dropdown v-bind:options="options" selected="Aktiivne"/>
-        <div class="col-lg-1">Handler</div>
+        <div class="col-lg-1 col-form-label">Handler</div>
         <div class="col-lg-5">
           <input placeholder="AB-122345" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
