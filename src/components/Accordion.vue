@@ -25,12 +25,7 @@
 </template>
 
 <script>
-import {
-  VsaList,
-  VsaItem,
-  VsaHeading,
-  VsaContent,
-} from 'vue-simple-accordion';
+import { VsaList, VsaItem, VsaHeading, VsaContent } from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 
 export default {
@@ -69,7 +64,8 @@ export default {
 .headers {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background: aquamarine;
+  background: #409AFF;
+  color: #FFF;
   padding-top: 10px;
 }
 </style>

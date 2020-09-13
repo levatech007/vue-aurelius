@@ -16,7 +16,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 header {
-  background-color: gray;
+  background-color: #263545;
   color: #FFF;
   padding: 10px 0;
 }

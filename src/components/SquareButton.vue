@@ -8,18 +8,24 @@
 
 export default {
   name: 'SquareButton',
-  // props: {
-  //   icon: String
-  // }
+  props: {
+    icon: String,
+    background: String,
+    color: String,
+    border: String
+  }
 
 }
 </script>
 
 <style scoped>
 button {
-  height: 70px;
-  width: 70px;
-  border-radius: 5px;
-  margin: 2px;
+  height: 65px;
+  width: 65px;
+  border-radius: 4px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  background: #74BD77;
+  border: 1px solid green;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="row">
     <div class="col-lg-4">
-      <TextInput />
+      <TextInput lbl="Debtor"/>
       <div class="buttons">
       <SquareButton
       v-for="(icon,idx) in icons"
@@ -11,14 +11,14 @@
     </div>
     <div class="col-lg-4">
       <TextInput
-        v-for="(label,idx) in labels"
+        v-for="(label,idx) in labelsOne"
         v-bind:key="idx"
         v-bind:lbl="label.name"
       />
     </div>
     <div class="col-lg-4">
       <TextInput
-        v-for="(label,idx) in labels"
+        v-for="(label,idx) in labelsTwo"
         v-bind:key="idx"
         v-bind:lbl="label.name"
       />
@@ -37,10 +37,16 @@ export default {
   },
   data: function() {
     return {
-        labels: [
+        labelsOne: [
           {name: 'Started'},
-          {name: 'Claim Handler'},
+          {name: 'Handler'},
           {name: 'Status'}
+        ],
+        labelsTwo: [
+          {name: 'Client'},
+          {name: 'Collector'},
+          {name: 'Contract'},
+          {name: 'Report Status'}
         ],
         icons: [{name: '1'},{name: '2'},{name: '3'},{name: '4'},{name: '5'},{name: '6'}]
       }
@@ -51,11 +57,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 section {
-  background: lightblue;
   min-height: 200px;
   padding: 25px 0;
+  margin-top: 25px;
 }
 .buttons {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 </style>
