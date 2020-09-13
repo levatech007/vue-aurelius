@@ -1,15 +1,15 @@
 {
 "buttons": [
-  { "name":"edit", "icon":"", "style":"red" },
-  { "name":"calendar", "icon":"", "style":"green" },
-  { "name":"phone", "icon":"", "style":"red" },
-  { "name":"refresh", "icon":"", "style":"blue" },
-  { "name":"email", "icon":"", "style":"green" },
-  { "name":"payment", "icon":"", "style":"red" },
-  { "name":"address", "icon":"", "style":"green" },
-  { "name":"todo", "icon":"", "style":"blue" },
-  { "name":"web", "icon":"", "style":"green" },
-  { "name":"square", "icon":"", "style":"red" },
-  { "name":"money", "icon":"", "style":"blue" }
+  { "name":"edit", "icon":"user-cog", "style":"red" },
+  { "name":"calendar", "icon":"calendar-alt", "style":"green" },
+  { "name":"phone", "icon":"phone", "style":"red" },
+  { "name":"sync", "icon":"sync-alt", "style":"blue" },
+  { "name":"email", "icon":"envelope", "style":"green" },
+  { "name":"payment", "icon":"hand-holding-usd", "style":"red" },
+  { "name":"address", "icon":"home", "style":"green" },
+  { "name":"todo", "icon":"list-alt", "style":"blue" },
+  { "name":"web", "icon":"globe", "style":"green" },
+  { "name":"square", "icon":"cubes", "style":"red" },
+  { "name":"money", "icon":"euro-sign", "style":"blue" }
 ]
 }
