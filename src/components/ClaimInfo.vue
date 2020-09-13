@@ -11,8 +11,10 @@
       <div class="row">
       <div class="buttons">
         <SquareButton
-        v-for="(icon,idx) in icons"
+        v-for="(btn,idx) in buttons"
         v-bind:key="idx"
+        v-bind:cls="btn.style"
+        v-bind:icon="btn.icon"
         />
       </div>
     </div>
@@ -62,6 +64,9 @@
 <script>
 import Dropdown from '../components/Dropdown.vue'
 import SquareButton from '../components/SquareButton.vue'
+import Data from '../../data.json'
+
+
 export default {
   name: 'ClaimInfo',
   components: {
@@ -70,22 +75,13 @@ export default {
   },
   data: function() {
     return {
-        labelsOne: [
-          {name: 'Started'},
-          {name: 'Handler'},
-          {name: 'Status'}
-        ],
-        labelsTwo: [
-          {name: 'Client'},
-          {name: 'Collector'},
-          {name: 'Contract'},
-          {name: 'Report Status'}
-        ],
         icons: [{name: '1'},{name: '2'},{name: '3'},{name: '4'},{name: '5'},{name: '6'}],
-        options: ['Aktiivne', 'Kohtus']
+        options: ['Aktiivne', 'Kohtus'],
+        buttons: JSON.parse(JSON.stringify(Data.buttons))
       }
-    }
   }
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

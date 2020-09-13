@@ -1,20 +1,24 @@
 <template>
-  <button>
-    <font-awesome-icon :icon="['fas', 'user-secret']"  :style="{ color: 'white' }" />
+  <button :class="style">
+    <font-awesome-icon
+      :icon="['fas', 'user-secret']"
+      :style="{ color: 'white' }"
+    />
   </button>
 </template>
 
 <script>
-
 export default {
   name: 'SquareButton',
   props: {
     icon: String,
-    background: String,
-    color: String,
-    border: String
+    cls: String
+  },
+  computed: {
+    style: function() {
+      return `${ this.cls }`;
+    }
   }
-
 }
 </script>
 
@@ -25,11 +29,21 @@ button {
   border-radius: 4px;
   margin-right: 35px;
   margin-bottom: 20px;
-  background: #74BD77;
-  border: 1px solid green;
+  border-style: solid;
 }
-.icons i,
 .button svg {
    fill: #FFF;
+}
+.green {
+  background:  #74BD77;
+  border-color: green;
+}
+.red {
+  background:  #FF8B8B;
+  border-color: red;
+}
+.blue {
+  background:  #C0D4E9;
+  border-color: #1D71A1;
 }
 </style>

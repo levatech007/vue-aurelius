@@ -1,8 +1,15 @@
-{"claims": [{
-  "viitenumber": "",
-  "nimi": "",
-  "isikukood":"",
-  "summad": [{}],
-  "todod": [{}]
-}]
+{
+"buttons": [
+  { "name":"edit", "icon":"", "style":"red" },
+  { "name":"calendar", "icon":"", "style":"green" },
+  { "name":"phone", "icon":"", "style":"red" },
+  { "name":"refresh", "icon":"", "style":"blue" },
+  { "name":"email", "icon":"", "style":"green" },
+  { "name":"payment", "icon":"", "style":"red" },
+  { "name":"address", "icon":"", "style":"green" },
+  { "name":"todo", "icon":"", "style":"blue" },
+  { "name":"web", "icon":"", "style":"green" },
+  { "name":"square", "icon":"", "style":"red" },
+  { "name":"money", "icon":"", "style":"blue" }
+]
 }
