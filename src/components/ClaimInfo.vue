@@ -15,6 +15,7 @@
         v-bind:key="idx"
         v-bind:lbl="label.name"
       />
+      <Dropdown />
     </div>
     <div class="col-lg-4">
       <TextInput
@@ -28,11 +29,13 @@
 
 <script>
 import TextInput from '../components/TextInput.vue'
+import Dropdown from '../components/Dropdown.vue'
 import SquareButton from '../components/SquareButton.vue'
 export default {
   name: 'ClaimInfo',
   components: {
     TextInput,
+    Dropdown,
     SquareButton
   },
   data: function() {

@@ -7,6 +7,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import store from './store'
+import vSelect from 'vue-select'
+Vue.component('v-select', vSelect)
 
 library.add(faUserSecret, faPhone)
 
