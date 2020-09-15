@@ -39,6 +39,8 @@ const state = {
   ]
 }
 
+
+
 const getters = {
   allTodos: (state) => state.todos
 }

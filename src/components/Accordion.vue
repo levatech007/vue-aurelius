@@ -9,7 +9,7 @@
       <div v-for="(todo,idx) in allTodos" :key="idx" v-b-toggle="'collapse-' + (idx+1)">
         <div class="row">
           <div class="col-lg-4 table-row" v-for="(item,idx) in todo.todo" :key="idx">{{ item }}</div>
-          <b-collapse class="row" :id="'collapse-' + (idx+1)"><div class="col-lg-10 offset-lg-2">{{ todo.comment }}</div></b-collapse>
+          <b-collapse :id="'collapse-' + (idx+1)"><div class="col-lg-10">{{ todo.comment }}</div></b-collapse>
         </div>
       </div>
     </div>
@@ -36,5 +36,15 @@ export default {
 .table-row {
   background: #F1F7FB;
   padding: 10px 0;
+}
+.collapse {
+  width: 100%;
+  background: lightgray;
+  /* padding: 8px 0; */
+  line-height: 40px;
+}
+.collapse .col-lg-10 {
+  border-left: 1px solid gray;
+  margin-left: 20px;
 }
 </style>
