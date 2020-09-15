@@ -26,6 +26,7 @@ export default {
   color: #2c3e50;
 }
 .row {
-  margin: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 </style>

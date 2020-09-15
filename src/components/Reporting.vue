@@ -1,8 +1,6 @@
 <template>
   <section>
-    <div class="row reporting">
       <Accordion />
-    </div>
   </section>
 </template>
 
