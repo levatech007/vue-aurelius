@@ -2,11 +2,29 @@
   <b-row>
     <b-col>
       <b-row class="headers">
-        <b-col v-for="(header,idx) in headers" :key="idx">{{ header }}</b-col>
+        <b-col
+          v-for="(header,idx) in headers"
+          :key="idx">
+          {{ header }}
+        </b-col>
       </b-row>
-      <b-row v-for="(row,idx) in contentRows" :key="idx" v-b-toggle="'collapse-' + (idx+1)">
-        <b-col class="table-row" :lg="colCount" v-for="(item,idx) in row.row" :key="idx">{{ item }}</b-col>
-        <b-collapse :id="'collapse-' + (idx+1)"><b-col lg="10">{{ row.expanded }}</b-col></b-collapse>
+      <b-row
+        v-for="(row,idx) in contentRows"
+        :key="idx"
+        v-b-toggle="'collapse-' + colCount + (idx+1)"
+      >
+        <b-col
+          class="table-row"
+          :lg="colCount"
+          v-for="(item,idx) in row.row"
+          :key="idx">
+          {{ item }}
+        </b-col>
+        <b-collapse :id="'collapse-' + colCount + (idx+1)">
+          <b-col lg="10">
+            {{ row.expanded }}
+          </b-col>
+        </b-collapse>
       </b-row>
     </b-col>
   </b-row>
@@ -18,11 +36,10 @@ export default {
   name: 'Accordion',
   props: {
     contentRows: Array,
-    headers: Array
+    headers: Array,
   },
   computed: {
     colCount: function() {
-      console.log
       return 12 / this.headers.length
     }
   }
