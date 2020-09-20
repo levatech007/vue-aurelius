@@ -1,0 +1,51 @@
+{ "claim": {
+  "viitenumber": "712345678",
+  "info": {
+    "nimi": "John Doe",
+    "solmitud": "2020-05-28",
+    "tegeleja": "EVA",
+    "staatus": "Aktiivne",
+    "klient": "Elisa Eesti",
+    "sissenoudja": "Julianus Inkasso",
+    "leping": "AB-1234",
+    "noude_staatus": "Aktiivne Inkassomenetlus"
+  },
+  "noude_summad": [{"nimi": "Principal", "summa": 134.87},{"nimi": "Late interest", "summa": 11.06},{"nimi": "Damages", "summa": 20 }],
+  "todos": [{
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Maksekokkulepe muudetud", "user":"EVA" },
+    "comment": ""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Maksekokkulepe", "user":"EVA" },
+    "comment": ""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Email võlglasele", "user":"EVA" },
+    "comment":"Emaili teks siia"
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Kliendi kommentaar", "user":"TEST" },
+    "comment":"Uus claim"
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm",  "descr":"Aktiivne", "user":"EVA" },
+    "comment":""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Aktiivne",  "user":"EVA" },
+    "comment":""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Lisati telefon 555-5555", "user":"TEST" },
+    "comment":""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"Lisati email", "user":"EVA" },
+    "comment":""
+  },
+  {
+    "todo": { "time":"11/14/1019 @ 11.33pm", "descr":"RR Päring", "user":"EVA" },
+    "comment":"Aadress Main St.123"
+  }]
+}
+}
