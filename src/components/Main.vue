@@ -1,27 +1,27 @@
 <template>
   <main>
-    <div class="row">
-      <div class="col-lg-12">
+    <b-row>
+      <b-col>
         <ClaimInfo :info="claim.info"/>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col lg="4">
         <Accordion :contentRows="claim.noude_summad" :headers="noudeSummadHeaders"/>
-        <div class="row ovals">
+        <b-row class="ovals">
           <OvalButton
           v-for="(btn,idx) in ovalButtons"
           v-bind:key="idx"
           v-bind:title="btn.name"
           v-bind:icon="btn.icon"
           />
-        </div>
+        </b-row>
         <Tabs />
-      </div>
-      <div class="col-lg-8">
+      </b-col>
+      <b-col lg="8">
         <Accordion :contentRows="claim.todos" :headers="menetluskaikHeaders"/>
-      </div>
-    </div>
+      </b-col>
+    </b-row>
   </main>
 </template>
 
