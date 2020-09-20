@@ -20,12 +20,14 @@
       </div>
       <div class="col-lg-8">
         <Reporting />
+        <div>{{ currentClaim.viitenumber }}</div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import ClaimInfo from '../components/ClaimInfo.vue'
 import ToolBar from '../components/ToolBar.vue'
 import Reporting from '../components/Reporting.vue'
@@ -46,7 +48,14 @@ export default {
     return {
         ovalButtons: JSON.parse(JSON.stringify(Data.ovalButtons)),
       }
-  }
+  },
+  methods: {
+      ...mapActions(["fetchClaim"])
+    },
+    computed: mapGetters(['currentClaim']),
+    created() {
+      this.fetchClaim()
+    }
 }
 </script>
 
