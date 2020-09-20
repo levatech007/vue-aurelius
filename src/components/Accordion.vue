@@ -1,17 +1,15 @@
 <template>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="row headers">
-        <div class="col-lg-4">Date</div>
-        <div class="col-lg-4">Name</div>
-        <div class="col-lg-4">User</div>
-      </div>
-      <div v-for="(todo,idx) in todos" :key="idx" v-b-toggle="'collapse-' + (idx+1)" class="row">
-          <div class="col-lg-4 table-row" v-for="(item,idx) in todo.todo" :key="idx">{{ item }}</div>
-          <b-collapse :id="'collapse-' + (idx+1)"><div class="col-lg-10">{{ todo.comment }}</div></b-collapse>
-      </div>
-    </div>
-  </div>
+  <b-row>
+    <b-col>
+      <b-row class="headers">
+        <b-col v-for="(header,idx) in headers" :key="idx">{{ header }}</b-col>
+      </b-row>
+      <b-row v-for="(row,idx) in contentRows" :key="idx" v-b-toggle="'collapse-' + (idx+1)">
+        <b-col class="table-row" :lg="colCount" v-for="(item,idx) in row.row" :key="idx">{{ item }}</b-col>
+        <b-collapse :id="'collapse-' + (idx+1)"><b-col lg="10">{{ row.expanded }}</b-col></b-collapse>
+      </b-row>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
@@ -19,7 +17,14 @@
 export default {
   name: 'Accordion',
   props: {
-    todos: Array
+    contentRows: Array,
+    headers: Array
+  },
+  computed: {
+    colCount: function() {
+      console.log
+      return 12 / this.headers.length
+    }
   }
 }
 </script>
