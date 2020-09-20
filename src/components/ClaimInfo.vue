@@ -24,7 +24,7 @@
       <b-row class="inputs">
         <b-col lg="1" class="col-form-label">Started</b-col>
         <b-col lg="5">
-          <input :placeholder="info.solmitud" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <DatePicker :date="info.solmitud" />
         </b-col>
         <b-col class="col-lg-1 col-form-label">Client</b-col>
           <b-col class="col-lg-5">
@@ -65,13 +65,15 @@
 <script>
 import Dropdown from '../components/Dropdown.vue'
 import SquareButton from '../components/SquareButton.vue'
+import DatePicker from '../components/DatePicker.vue'
 import Data from '../../data.json'
 
 export default {
   name: 'ClaimInfo',
   components: {
     Dropdown,
-    SquareButton
+    SquareButton,
+    DatePicker
   },
   props: {
     info: Object
