@@ -45,7 +45,7 @@
 
       <div class="row inputs">
         <div class="col-lg-1 col-form-label">Status</div>
-        <Dropdown v-bind:options="options" selected="Aktiivne"/>
+        <Dropdown :options="claimStatuses" :selected="info.staatus"/>
         <div class="col-lg-1 col-form-label">Contract</div>
         <div class="col-lg-5">
           <input :placeholder="info.leping" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
@@ -55,7 +55,7 @@
       <div class="row inputs">
         <div class="col-lg-6"></div>
         <div class="col-lg-1 col-form-label">Report Status</div>
-        <Dropdown v-bind:options="options" selected="Aktiivne inkassomenetlus" />
+        <Dropdown :options="reportStatuses" :selected="info.noude_staatus" />
       </div>
     </div>
   </section>
@@ -78,7 +78,9 @@ export default {
   data: function() {
     return {
         options: ['Aktiivne', 'Kohtus'],
-        buttons: JSON.parse(JSON.stringify(Data.buttons))
+        buttons: JSON.parse(JSON.stringify(Data.buttons)),
+        claimStatuses: JSON.parse(JSON.stringify(Data.claimStatuses)),
+        reportStatuses: JSON.parse(JSON.stringify(Data.reportStatuses))
       }
   }
 }
