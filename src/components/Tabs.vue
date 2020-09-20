@@ -1,6 +1,5 @@
 <template>
     <b-tabs content-class="mt-3" justified>
-
       <b-tab
         v-for="(tab,idx) in tabs"
         :title="tab.name"
@@ -34,15 +33,18 @@ li .nav-item {
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
   color: #FFF;
-  background-color: #409AFF;
-  border: none;
+  background-color: #409AFF !important;
+  border: none !important;
 }
 .nav-tabs .nav-link {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background: #263645;
-  border: none;
+  border: none !important;
 }
+/* .nav-tabs .nav-link.active {
+  background-color: #409AFF !important;
+} */
 .tab-content {
   min-height: 300px;
   background: #FAF3F3;

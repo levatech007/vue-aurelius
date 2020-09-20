@@ -1,7 +1,8 @@
-{ "claim": {
+{ "claim":
+  {
   "viitenumber": "712345678",
   "info": {
-    "nimi": "John Doe",
+    "nimi": "Jane Tamm",
     "solmitud": "2020-05-28",
     "tegeleja": "EVA",
     "staatus": "Aktiivne",

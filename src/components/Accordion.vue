@@ -6,22 +6,21 @@
         <div class="col-lg-4">Name</div>
         <div class="col-lg-4">User</div>
       </div>
-      <div v-for="(todo,idx) in allTodos" :key="idx" v-b-toggle="'collapse-' + (idx+1)">
-        <div class="row">
+      <div v-for="(todo,idx) in todos" :key="idx" v-b-toggle="'collapse-' + (idx+1)" class="row">
           <div class="col-lg-4 table-row" v-for="(item,idx) in todo.todo" :key="idx">{{ item }}</div>
           <b-collapse :id="'collapse-' + (idx+1)"><div class="col-lg-10">{{ todo.comment }}</div></b-collapse>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'Accordion',
-  computed: mapGetters(['allTodos'])
+  props: {
+    todos: Array
+  }
 }
 </script>
 

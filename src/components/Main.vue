@@ -2,12 +2,12 @@
   <main>
     <div class="row">
       <div class="col-lg-12">
-        <ClaimInfo />
+        <ClaimInfo :info="claim.info"/>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-4">
-        <ToolBar />
+        <ToolBar :amounts="claim.noude_summad"/>
         <div class="row ovals">
           <OvalButton
           v-for="(btn,idx) in ovalButtons"
@@ -19,18 +19,16 @@
         <Tabs />
       </div>
       <div class="col-lg-8">
-        <Reporting />
-        <div>{{ currentClaim.viitenumber }}</div>
+        <Accordion :todos="claim.todos"/>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import Accordion from '../components/Accordion'
 import ClaimInfo from '../components/ClaimInfo.vue'
 import ToolBar from '../components/ToolBar.vue'
-import Reporting from '../components/Reporting.vue'
 import OvalButton from '../components/OvalButton.vue'
 import Tabs from '../components/Tabs.vue'
 import Data from '../../data.json'
@@ -40,22 +38,18 @@ export default {
   components: {
     ClaimInfo,
     ToolBar,
-    Reporting,
     OvalButton,
-    Tabs
+    Tabs,
+    Accordion
+  },
+  props: {
+    claim: Object
   },
   data: function() {
     return {
         ovalButtons: JSON.parse(JSON.stringify(Data.ovalButtons)),
       }
-  },
-  methods: {
-      ...mapActions(["fetchClaim"])
-    },
-    computed: mapGetters(['currentClaim']),
-    created() {
-      this.fetchClaim()
-    }
+  }
 }
 </script>
 

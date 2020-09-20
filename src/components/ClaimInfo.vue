@@ -3,9 +3,9 @@
     <!-- LEFT SECTION -->
     <div class="col-lg-4">
       <div class="row">
-        <div class="col-lg-3">Debtor</div>
+        <div class="col-lg-3 col-form-label">Debtor</div>
         <div class="col-lg-9">
-          <input placeholder="Jane Doe" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <input :placeholder="info.nimi" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
       </div>
       <div class="row">
@@ -24,18 +24,18 @@
       <div class="row inputs">
         <div class="col-lg-1 col-form-label">Started</div>
         <div class="col-lg-5">
-          <input placeholder="Kuupäev siia" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <input :placeholder="info.solmitud" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
         <div class="col-lg-1 col-form-label">Client</div>
           <div class="col-lg-5">
-            <input placeholder="John Doe" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+            <input :placeholder="info.klient" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
           </div>
       </div>
 
       <div class="row inputs">
         <div class="col-lg-1 col-form-label">Handler</div>
         <div class="col-lg-5">
-          <input placeholder="EVA" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <input :placeholder="info.tegeleja" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
         <div class="col-lg-1 col-form-label">Collector</div>
         <div class="col-lg-5">
@@ -46,9 +46,9 @@
       <div class="row inputs">
         <div class="col-lg-1 col-form-label">Status</div>
         <Dropdown v-bind:options="options" selected="Aktiivne"/>
-        <div class="col-lg-1 col-form-label">Handler</div>
+        <div class="col-lg-1 col-form-label">Contract</div>
         <div class="col-lg-5">
-          <input placeholder="AB-122345" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+          <input :placeholder="info.leping" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
         </div>
       </div>
 
@@ -66,16 +66,17 @@ import Dropdown from '../components/Dropdown.vue'
 import SquareButton from '../components/SquareButton.vue'
 import Data from '../../data.json'
 
-
 export default {
   name: 'ClaimInfo',
   components: {
     Dropdown,
     SquareButton
   },
+  props: {
+    info: Object
+  },
   data: function() {
     return {
-        icons: [{name: '1'},{name: '2'},{name: '3'},{name: '4'},{name: '5'},{name: '6'}],
         options: ['Aktiivne', 'Kohtus'],
         buttons: JSON.parse(JSON.stringify(Data.buttons))
       }

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Header/>
-    <Main />
+    <Header :viitenumber="currentClaim.viitenumber" />
+    <Main :claim="currentClaim"/>
   </div>
 </template>
 <script>
 
-
+import { mapGetters, mapActions } from 'vuex'
 import Header from '../components/Header.vue'
 import Main from '../components/Main.vue'
 export default {
@@ -15,10 +15,16 @@ export default {
     Header,
     Main
   },
+  methods: {
+      ...mapActions(["fetchClaim"])
+  },
+  computed: mapGetters(['currentClaim']),
+  created() {
+    this.fetchClaim()
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>
