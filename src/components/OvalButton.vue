@@ -1,5 +1,5 @@
 <template>
-  <div class='col-lg-4'>
+  <b-col lg="4">
     <div class="oval">
       <font-awesome-icon
         :icon="['fas', icon]"
@@ -8,7 +8,7 @@
       />
       {{ title }}
     </div>
-  </div>
+  </b-col>
 </template>
 
 <script>
@@ -33,11 +33,6 @@ export default {
   border: 1px solid #DDEDFF;
   box-shadow: 0 0 20px rgba(146,160,176,0.38);
   padding: 7px 0;
-  vertical-align: middle;
-}
-.oval p {
-  display: inline-block;
-  margin: 0;
   vertical-align: middle;
 }
 </style>

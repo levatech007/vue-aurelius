@@ -1,64 +1,65 @@
 <template>
-  <section class="row">
+  <b-row class="section">
     <!-- LEFT SECTION -->
-    <div class="col-lg-4">
-      <div class="row">
-        <div class="col-lg-3 col-form-label">Debtor</div>
-        <div class="col-lg-9">
+    <b-col lg="4">
+      <b-row>
+        <b-col lg="3" class="col-form-label">Debtor</b-col>
+        <b-col lg="9">
           <input :placeholder="info.nimi" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
+        </b-col>
+      </b-row>
+      <b-row>
+        <div class="buttons">
+          <SquareButton
+          v-for="(btn,idx) in buttons"
+          v-bind:key="idx"
+          v-bind:cls="btn.style"
+          v-bind:icon="btn.icon"
+          />
         </div>
-      </div>
-      <div class="row">
-      <div class="buttons">
-        <SquareButton
-        v-for="(btn,idx) in buttons"
-        v-bind:key="idx"
-        v-bind:cls="btn.style"
-        v-bind:icon="btn.icon"
-        />
-      </div>
-    </div>
-    </div>
+      </b-row>
+    </b-col>
     <!-- RIGHT SECTION -->
-    <div class="col-lg-8">
-      <div class="row inputs">
-        <div class="col-lg-1 col-form-label">Started</div>
-        <div class="col-lg-5">
+    <b-col lg="8">
+      <b-row class="inputs">
+        <b-col lg="1" class="col-form-label">Started</b-col>
+        <b-col lg="5">
           <input :placeholder="info.solmitud" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-        </div>
-        <div class="col-lg-1 col-form-label">Client</div>
-          <div class="col-lg-5">
+        </b-col>
+        <b-col class="col-lg-1 col-form-label">Client</b-col>
+          <b-col class="col-lg-5">
             <input :placeholder="info.klient" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-          </div>
-      </div>
+          </b-col>
+      </b-row>
 
-      <div class="row inputs">
-        <div class="col-lg-1 col-form-label">Handler</div>
-        <div class="col-lg-5">
+      <b-row class="inputs">
+        <b-col lg="1" class="col-form-label">Handler</b-col>
+        <b-col lg="5">
           <input :placeholder="info.tegeleja" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-        </div>
-        <div class="col-lg-1 col-form-label">Collector</div>
-        <div class="col-lg-5">
+        </b-col>
+        <b-col lg="1" class="col-form-label">Collector</b-col>
+        <b-col lg="5">
           <input placeholder="Julianus" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-        </div>
-      </div>
+        </b-col>
+      </b-row>
 
-      <div class="row inputs">
-        <div class="col-lg-1 col-form-label">Status</div>
+      <b-row class="inputs">
+        <b-col lg="1" class="col-form-label">Status</b-col>
         <Dropdown :options="claimStatuses" :selected="info.staatus"/>
-        <div class="col-lg-1 col-form-label">Contract</div>
-        <div class="col-lg-5">
+        <b-col lg="1" class="col-form-label">Contract</b-col>
+        <b-col lg="5">
           <input :placeholder="info.leping" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-        </div>
-      </div>
+        </b-col>
+      </b-row>
 
-      <div class="row inputs">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-1 col-form-label">Report Status</div>
+      <b-row class="inputs">
+        <b-col lg="6"></b-col>
+        <b-col lg="1" class="col-form-label">Report Status</b-col>
         <Dropdown :options="reportStatuses" :selected="info.noude_staatus" />
-      </div>
-    </div>
-  </section>
+      </b-row>
+    </b-col>
+
+  </b-row>
 </template>
 
 <script>
@@ -89,7 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-section {
+.section {
   min-height: 200px;
   padding: 25px 0;
   margin-top: 25px;
