@@ -20,6 +20,11 @@ npm run build
 npm run lint
 ```
 
+### Install JSON server
+```
+npm install -g json-server
+```
+
 ### Run JSON database from database.json
 ```
 json-server --watch database.json
