@@ -18,5 +18,5 @@
     { "name":"Sms", "icon":"comment" }
   ],
   "claimStatuses": ["Aktiivne", "Sisestamisel", "Ettepanek kohtusse", "Maksekäsk kohtus", "Lõpetada: tasutud", "Test"],
-  "reportStatuses": ["Aktiivne inkassomenetlus", "Menetlus lõpetamisel", "Nõude menetluse algus", "Hagiavaldus ettevalmistamisel", "Menetlus lõpetamisel - nõue on tasutud"]
+  "reportStatuses": ["Aktiivne inkassomenetlus", "Menetlus lõpetamisel", "Hagiavaldus ettevalmistamisel", "Menetlus lõpetamisel - nõue on tasutud"]
 }
